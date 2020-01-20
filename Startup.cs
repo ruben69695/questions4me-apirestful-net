@@ -23,6 +23,7 @@ namespace questions4me_apirestful_net
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddContextForInjection(Configuration);
+            services.AddServicesForInjection();
             services.AddControllers();
         }
 
@@ -75,7 +76,7 @@ namespace questions4me_apirestful_net
             }
 
             connectionString 
-                = $"Host={secretHostValue};Database=postgres;Username={secretUsernameValue};Password={secretPasswordValue}";
+                = $"Host={secretHostValue};Database=questions4me;Username={secretUsernameValue};Password={secretPasswordValue};Ssl Mode=Require;";
 
             return services
                 .AddDbContext<Context>(options => options.UseNpgsql(connectionString));
