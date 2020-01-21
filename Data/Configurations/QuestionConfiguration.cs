@@ -31,7 +31,8 @@ namespace questions4me_apirestful_net.Data.Configurations
 
             builder.Property(q => q.AnsweredAt)
                 .HasColumnName("answer_at")
-                .HasColumnType("timestamptz");
+                .HasColumnType("timestamptz")
+                .HasDefaultValue(null);
         }
     }
 }

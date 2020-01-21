@@ -8,6 +8,6 @@ namespace questions4me_apirestful_net.Models
         public string CreatedBy { get; set; }
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime AnsweredAt { get; set; }
+        public DateTime? AnsweredAt { get; set; }
     }
 }
